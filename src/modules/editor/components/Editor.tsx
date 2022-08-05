@@ -1,17 +1,9 @@
-import { FunctionComponent, useEffect, useState } from 'react'
+import { FunctionComponent, useState } from 'react'
 import { Editor as DraftJsEditor, EditorState } from 'draft-js'
 
+import { useIsMounted } from '../../shared/hooks/useIsMounted'
+
 export type EditorProps = {}
-
-const useIsMounted = () => {
-  const [isMounted, setIsMounted] = useState(false)
-
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
-
-  return isMounted
-}
 
 export const Editor: FunctionComponent<EditorProps> = () => {
   const isMounted = useIsMounted()
