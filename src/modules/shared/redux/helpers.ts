@@ -1,13 +1,13 @@
 import { Action } from './types'
 
 export const actionCreator =
-  <TActionName extends string, TCreatePayload extends (...args: any[]) => any>(
-    type: TActionName,
-    createPayload: TCreatePayload
+  <ActionName extends string, CreatePayload extends (...args: any[]) => any>(
+    type: ActionName,
+    createPayload: CreatePayload
   ) =>
   (
     ...args: Parameters<typeof createPayload>
-  ): Action<TActionName, ReturnType<typeof createPayload>> => {
+  ): Action<ActionName, ReturnType<typeof createPayload>> => {
     return {
       type,
       payload: createPayload(...args),
