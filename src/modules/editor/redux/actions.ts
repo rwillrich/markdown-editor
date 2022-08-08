@@ -1,7 +1,9 @@
 import { DraftJsEditorState } from '../../draft-js'
 import { actionCreator } from '../../shared/redux/helpers'
-
-export const SET_DRAFT_JS_EDITOR_STATE = 'editor/SET_DRAFT_JS_EDITOR_STATE'
+import {
+  RESET_DRAFT_JS_EDITOR_STATE,
+  SET_DRAFT_JS_EDITOR_STATE,
+} from './actionTypes'
 
 export const setDraftJsEditorState = actionCreator(
   SET_DRAFT_JS_EDITOR_STATE,
@@ -9,8 +11,8 @@ export const setDraftJsEditorState = actionCreator(
 )
 
 export const resetDraftJsEditorState = actionCreator(
-  SET_DRAFT_JS_EDITOR_STATE,
-  () => DraftJsEditorState.createEmpty()
+  RESET_DRAFT_JS_EDITOR_STATE,
+  () => {}
 )
 
 export type EditorAction =
