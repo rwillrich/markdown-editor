@@ -2,11 +2,11 @@ import produce from 'immer'
 
 import { DraftJsEditorState } from '../../draft-js'
 
-import { EditorAction } from './actions'
 import {
   RESET_DRAFT_JS_EDITOR_STATE,
   SET_DRAFT_JS_EDITOR_STATE,
 } from './actionTypes'
+import { EditorAction } from './actions'
 
 export type EditorState = {
   draftJsEditorState: DraftJsEditorState
