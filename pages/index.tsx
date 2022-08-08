@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 import { Editor } from '../src/modules/editor'
+import { Preview } from '../src/modules/preview'
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <Editor />
+        <Preview />
       </main>
     </>
   )

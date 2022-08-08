@@ -4,7 +4,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, AppState } from '../../../store'
 import { DraftJsEditor, DraftJsEditorState } from '../../draft-js'
 import { useIsMounted } from '../../shared/hooks/useIsMounted'
-import { resetDraftJsEditorState, setDraftJsEditorState } from '../redux'
+import {
+  resetDraftJsEditorState,
+  selectEditorDraftJsEditorState,
+  setDraftJsEditorState,
+} from '../redux'
 
 export type EditorProps = {}
 
@@ -12,9 +16,11 @@ export const Editor: FunctionComponent<EditorProps> = () => {
   const isMounted = useIsMounted()
 
   const dispatch = useDispatch<AppDispatch>()
+
   const draftJsEditorState = useSelector<AppState, DraftJsEditorState>(
-    state => state.editor.draftJsEditorState
+    selectEditorDraftJsEditorState
   )
+
   const handleDraftJsEditorStateChange = useCallback(
     (newDraftJsEditorState: DraftJsEditorState) => {
       dispatch(setDraftJsEditorState(newDraftJsEditorState))
