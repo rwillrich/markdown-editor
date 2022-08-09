@@ -1,7 +1,7 @@
 import { createSelector } from '@reduxjs/toolkit'
 
-import { DraftJsEditorState } from '../../draft-js'
-import { AppState } from '../../store'
+import { AppState } from '../../shared/redux'
+import { DraftJsEditorState } from '../draft-js'
 
 export const selectEditorDraftJsEditorState = (
   state: AppState

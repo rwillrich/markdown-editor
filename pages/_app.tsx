@@ -3,7 +3,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Provider } from 'react-redux'
 
-import { store } from '../src/store'
+import { store } from '../src/shared/redux'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

@@ -1,5 +1,5 @@
-import { DraftJsEditorState } from '../../draft-js'
-import { actionCreator } from '../../shared/redux/helpers'
+import { actionCreator } from '../../shared/redux'
+import { DraftJsEditorState } from '../draft-js'
 
 import {
   RESET_DRAFT_JS_EDITOR_STATE,

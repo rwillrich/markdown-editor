@@ -5,7 +5,7 @@ import {
   reducer as editor,
   nonSerializableActions as editorNonSerializableActions,
   nonSerializableStatePaths as editorNonSerializableStatePaths,
-} from './editor/redux'
+} from '../../editor/redux'
 
 const rootReducer = combineReducers({ editor })
 

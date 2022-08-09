@@ -1,16 +1,13 @@
 import { produce } from 'immer'
 
-import { DraftJsEditorState } from '../../draft-js'
+import { DraftJsEditorState } from '../draft-js'
 
 import {
   RESET_DRAFT_JS_EDITOR_STATE,
   SET_DRAFT_JS_EDITOR_STATE,
 } from './actionTypes'
 import { EditorAction } from './actions'
-
-export type EditorState = {
-  draftJsEditorState: DraftJsEditorState
-}
+import { EditorState } from './types'
 
 const initialState: EditorState = {
   draftJsEditorState: DraftJsEditorState.createEmpty(),
