@@ -28,3 +28,5 @@ export const reducer = produce((draft: EditorState, action: EditorAction) => {
       break
   }
 }, initialState)
+
+export const nonSerializableStatePaths = ['editor.draftJsEditorState']

@@ -1,3 +1,4 @@
 export * from './actions'
-export { reducer } from './reducer'
+export { reducer, nonSerializableStatePaths } from './reducer'
 export * from './selectors'
+export { nonSerializableActions } from './actionTypes'
