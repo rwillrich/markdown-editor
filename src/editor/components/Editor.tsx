@@ -1,9 +1,9 @@
 import { FunctionComponent, useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { AppDispatch, AppState } from '../../../store'
 import { DraftJsEditor, DraftJsEditorState } from '../../draft-js'
 import { useIsMounted } from '../../shared/hooks/useIsMounted'
+import { AppDispatch, AppState } from '../../store'
 import {
   resetDraftJsEditorState,
   selectEditorDraftJsEditorState,

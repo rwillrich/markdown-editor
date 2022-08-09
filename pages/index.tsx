@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import { Editor } from '../src/modules/editor'
-import { Preview } from '../src/modules/preview'
+import { Editor } from '../src/editor'
+import { Preview } from '../src/preview'
 
 const Home: NextPage = () => {
   return (
